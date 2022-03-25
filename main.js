@@ -6,7 +6,7 @@ var menu = {
         mains: [],
         desserts: []
     },
-    addDishToCourse: function () {
+    addDishToCourse: function (courseName, dishName, dishPrice) {
 
     },
 }
