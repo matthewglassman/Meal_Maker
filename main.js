@@ -15,7 +15,7 @@ var menu = {
         //logic to push dish object into courses array for based on courseName
 
     },
-    getRandomDishFromCourse: function () {
-        
+    getRandomDishFromCourse: function (courseName) {
+
     }
 }
