@@ -26,6 +26,14 @@ var menu = {
         }
     },
     getRandomDishFromCourse: function (courseName) {
-
+       let randomDishArray = Math.floor(menu.courses[courseName].length * Math.random());
+        var dishes = menu.courses[courseName][randomDishArray];
+        // return dishes;
+        console.log(dishes);
+        // console.log(randomDishArray);
     }
 }
+menu.addDishToCourse('appetizers', 'chips', 1.50);
+menu.addDishToCourse('appetizers', 'pretzels', 1.75);
+//console.log(menu.courses.appetizers);
+menu.getRandomDishFromCourse('appetizers');
