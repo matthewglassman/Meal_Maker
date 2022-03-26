@@ -13,7 +13,17 @@ var menu = {
         }
 
         //logic to push dish object into courses array for based on courseName
-
+        switch (courseName) {
+            case 'appetizers':
+                menu.courses.appetizers.push(dish);
+                break;
+            case 'mains':
+                menu.courses.mains.push(dish);
+                break;
+            case 'desserts':
+                menu.courses.desserts.push(dish);
+                break;
+        }
     },
     getRandomDishFromCourse: function (courseName) {
 
