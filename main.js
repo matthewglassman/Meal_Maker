@@ -36,6 +36,8 @@ var menu = {
         appetizer = menu.getRandomDishFromCourse('appetizers');
         main = menu.getRandomDishFromCourse('mains');
         dessert = menu.getRandomDishFromCourse('desserts');
+
+        let totalPrice = menu.courses[appetizers].price + menu.courses[mains].price + menu.courses[desserts].price;
     }
 }
 menu.addDishToCourse('appetizers', 'chips', 1.50);
