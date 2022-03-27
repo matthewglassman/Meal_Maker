@@ -28,12 +28,14 @@ var menu = {
     getRandomDishFromCourse: function (courseName) {
        let randomDishArray = Math.floor(menu.courses[courseName].length * Math.random());
         var dishes = menu.courses[courseName][randomDishArray];
-        // return dishes;
-        console.log(dishes);
+        return dishes;
+        // console.log(dishes);
         // console.log(randomDishArray);
     },
     generateRandomMeal: function () {
-        
+        appetizer = menu.getRandomDishFromCourse('appetizers');
+        main = menu.getRandomDishFromCourse('mains');
+        dessert = menu.getRandomDishFromCourse('desserts');
     }
 }
 menu.addDishToCourse('appetizers', 'chips', 1.50);
