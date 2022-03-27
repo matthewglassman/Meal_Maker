@@ -31,6 +31,9 @@ var menu = {
         // return dishes;
         console.log(dishes);
         // console.log(randomDishArray);
+    },
+    generateRandomMeal: function () {
+        
     }
 }
 menu.addDishToCourse('appetizers', 'chips', 1.50);
