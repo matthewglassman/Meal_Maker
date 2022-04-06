@@ -39,15 +39,18 @@ var menu = {
 
         let totalPrice = appetizer.price + main.price + dessert.price;
 
-        console.log("Meal generated...  Your appetizer is", appetizer.name, ".  Your main should be",main.name, "and you should finish with", dessert.name, ". The meal will cost $", totalPrice, ".")
+        console.log("Meal generated...  Your appetizer is", appetizer.name,". Your main should be",main.name, "and you should finish with", dessert.name, ". The meal will cost $", totalPrice, ".")
     }
 }
 menu.addDishToCourse('appetizers', 'chips', 1.50);
 menu.addDishToCourse('appetizers', 'pretzels', 1.75);
+menu.addDishToCourse('appetizers', 'soup', 2.00);
 menu.addDishToCourse('mains', 'chicken', 10.50);
+menu.addDishToCourse('mains', 'sandwich', 5.25);
 menu.addDishToCourse('desserts', 'pie', 2.00);
 menu.addDishToCourse('desserts', 'cake', 3.50);
+menu.addDishToCourse('dessert', 'ice cream', 3.00);
 menu.addDishToCourse('mains', 'steak', 23.00);
 //console.log(menu.courses.appetizers);
 // menu.getRandomDishFromCourse('appetizers');
-menu.generateRandomMeal();
+var meal = menu.generateRandomMeal();
