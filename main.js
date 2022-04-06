@@ -25,13 +25,14 @@ var menu = {
                 break;
         }
     },
+//Use a randomizer to generate a random index for a given course to get a dish.
     getRandomDishFromCourse: function (courseName) {
        let randomDishArray = Math.floor(menu.courses[courseName].length * Math.random());
         var dishes = menu.courses[courseName][randomDishArray];
         return dishes;
-        // console.log(dishes.price);
-        // console.log(randomDishArray);
     },
+
+//Generate a random meal from the getRandomDishFromCourse method and return items in a string along with a sum of total price.
     generateRandomMeal: function () {   
         appetizer = menu.getRandomDishFromCourse('appetizers');
         main = menu.getRandomDishFromCourse('mains');
@@ -39,9 +40,12 @@ var menu = {
 
         let totalPrice = appetizer.price + main.price + dessert.price;
 
-        console.log("Meal generated...  Your appetizer is", appetizer.name,". Your main should be",main.name, "and you should finish with", dessert.name, ". The meal will cost $", totalPrice, ".")
+        let order = "Meal generated...  Your appetizer is " + appetizer.name + ". Your main should be " + main.name + ", and you should finish with " + dessert.name +". The meal will cost $" + totalPrice + ".";
+        return order;
     }
 }
+
+//Add dishes to menu courses
 menu.addDishToCourse('appetizers', 'chips', 1.50);
 menu.addDishToCourse('appetizers', 'pretzels', 1.75);
 menu.addDishToCourse('appetizers', 'soup', 2.00);
@@ -51,6 +55,6 @@ menu.addDishToCourse('desserts', 'pie', 2.00);
 menu.addDishToCourse('desserts', 'cake', 3.50);
 menu.addDishToCourse('dessert', 'ice cream', 3.00);
 menu.addDishToCourse('mains', 'steak', 23.00);
-//console.log(menu.courses.appetizers);
-// menu.getRandomDishFromCourse('appetizers');
-var meal = menu.generateRandomMeal();
+
+var meal = menu.generateRandomMeal(); 
+console.log(meal);
